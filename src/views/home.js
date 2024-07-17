@@ -16,9 +16,6 @@ function Home({ data, data1, data2 }) {
         if ($(".js-colorlib-nav-toggle").hasClass("active")) {
           $(".js-colorlib-nav-toggle").removeClass("active");
           $(".body").removeClass("offcanvas");
-        } else {
-          $(".js-colorlib-nav-toggle").addClass("active");
-          $(".body").addClass("offcanvas");
         }
 	};	
 	
