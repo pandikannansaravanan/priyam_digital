@@ -38,7 +38,15 @@ function Outdoor({ out, out1, caros }) {
       }
     }, 2000);
   }, []);
-
+		setTimeout(() => {
+      $(window).on("resize load", function () {
+        console.log($(window).width());
+        if ($(window).width() >= 768) {
+          $(".js-colorlib-nav-toggle").removeClass("active");
+          $(".body").removeClass("offcanvas");
+        }
+      });
+    }, 2000);
   return (
       <>
     <div id="colorlib-page">

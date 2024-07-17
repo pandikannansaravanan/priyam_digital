@@ -16,6 +16,9 @@ function Home({ data, data1, data2 }) {
         if ($(".js-colorlib-nav-toggle").hasClass("active")) {
           $(".js-colorlib-nav-toggle").removeClass("active");
           $(".body").removeClass("offcanvas");
+        } else {
+          $(".js-colorlib-nav-toggle").addClass("active");
+          $(".body").addClass("offcanvas");
         }
 	};	
 	
@@ -29,8 +32,8 @@ function Home({ data, data1, data2 }) {
 	$("body").addClass("loading-full");
 	$("html, body").scrollTop($("body").offset().top);
 	AOS.init();
-	setTimeout(() => {
-		Toggle();
+		setTimeout(() => {
+      Toggle();
 		if (localStorage.getItem("initial_loader") != "null") {
         $("body").removeClass("loading-full");
       } else {
@@ -41,7 +44,15 @@ function Home({ data, data1, data2 }) {
       }
 	}, 2000);
 	}, []);
-
+		setTimeout(() => {
+          $(window).on("resize load", function () {
+            console.log($(window).width());
+            if ($(window).width() >= 768) {
+              $(".js-colorlib-nav-toggle").removeClass("active");
+              $(".body").removeClass("offcanvas");
+            }
+          });
+        }, 2000);
 	return (
 		<div id="colorlib-page">
 		<a className="js-colorlib-nav-toggle colorlib-nav-toggle" onClick={() => Toggle()}><i></i></a>

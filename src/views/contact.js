@@ -29,7 +29,16 @@ function Outdoor() {
         Toggle();
       }, 2000);
   }, []);
-    
+    		setTimeout(() => {
+          $(window).on("resize load", function () {
+            console.log($(window).width());
+            if ($(window).width() >= 768) {
+              $(".js-colorlib-nav-toggle").removeClass("active");
+              $(".body").removeClass("offcanvas");
+            }
+          });
+        }, 2000);
+  
    const handleSubmit = async (e) => {
     const serviceId = "service_33i65kg";
      const templateId = "template_gvenf0n";
