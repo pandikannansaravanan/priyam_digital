@@ -1,0 +1,29 @@
+.items{
+    height: 400px;
+    width: 100%;
+    aspect-ratio: 1.5 / 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.item:not(.active){
+    filter: grayscale(100%)
+}
+.items:has(.item.active) .item:not(.active){
+    filter: grayscale(100%)
+}
+
+.item{
+    height: 100%;
+    width: calc(100% / 5);
+    object-fit: cover;
+    overflow: hidden;
+    /* border: 2px solid #141414; */
+    transition: all 0.4s cubic-bezier(0.32, 0, 0.67, 0);
+  cursor: pointer;
+}
+
+.active{
+    width: 200%;
+}
+

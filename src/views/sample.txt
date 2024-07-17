@@ -1,0 +1,44 @@
+			<div className="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+				<div className="blog-entry">
+				<a className="new-a img img-2" style={{backgroundImage:  `url(${tr1})`}}></a>
+				<div className="text text-2 pt-2 mt-3">
+				{/* <span className="category mb-3 d-block"><a className="new-a">Wedding</a></span>
+				<h3 className="mb-4"><a >Create Your Memories.</a></h3>
+				<p className="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost</p> */}
+				{/* <div className="author mb-4 d-flex align-items-center">
+					<a href="#" className="img" style={{backgroundImage: "url('https://drive.google.com/thumbnail?id="+`${element.id}`+"&sz=w1000')"}}></a>
+					<div className="ml-3 info">
+						<span>Written by</span>
+						<h3><a href="#">Dave Lewis</a>, <span>Nov. 28, 2018</span></h3>
+					</div>
+				</div>
+				<div className="meta-wrap align-items-center">
+				<div className="half order-md-last">
+					<p className="meta">
+						<span><i className="icon-heart"></i>3</span>
+						<span><i className="icon-eye"></i>100</span>
+						<span><i className="icon-comment"></i>5</span>
+					</p>
+				</div>
+				<div className="half">
+					<p><a href="#" className="btn py-2">Continue Reading <span className="ion-ios-arrow-forward"></span></a></p>
+				</div>
+				</div> */}
+			</div>
+					</div>
+			</div>
+
+----------------
+            <div className="row no-gutters">
+				{wedd?.files?.map((element, index) => (
+              <div key={index} className="col-md-3" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+                <a href="#" className="photography-entry img d-flex justify-content-center align-items-center" style={{backgroundImage: "url('https://drive.google.com/thumbnail?id="+`${element.id}`+"&sz=w1000')"}}>
+                  <div className="overlay"></div>
+                  {/* <div className="text text-center">
+                    <h3>Work 01</h3>
+                    <span>Technology</span>
+                  </div> */}
+                </a>
+              </div>
+				))}
+            </div>
