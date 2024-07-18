@@ -40,7 +40,7 @@ function Navigation() {
 		}
 
 	$(document).on("click", ".navi li", function () {
-		if ($(window).width() <= 768) {
+		if ($(window).width() <= 842) {
 			$(".js-colorlib-nav-toggle").removeClass("active");
 			$(".body").removeClass("offcanvas");
 		}
