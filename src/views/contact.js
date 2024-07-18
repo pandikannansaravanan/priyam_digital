@@ -31,7 +31,7 @@ function Outdoor() {
   }, []);
     		setTimeout(() => {
           $(window).on("resize load", function () {
-            console.log($(window).width());
+            
             if ($(window).width() >= 768) {
               $(".js-colorlib-nav-toggle").removeClass("active");
               $(".body").removeClass("offcanvas");
