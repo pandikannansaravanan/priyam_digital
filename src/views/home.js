@@ -33,7 +33,7 @@ function Home({ data, data1, data2 }) {
 	$("html, body").scrollTop($("body").offset().top);
 	AOS.init();
 		setTimeout(() => {
-      Toggle();
+    //   Toggle();
 		if (localStorage.getItem("initial_loader") != "null") {
         $("body").removeClass("loading-full");
       } else {

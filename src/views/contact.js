@@ -26,7 +26,7 @@ function Outdoor() {
     $("html, body").scrollTop($("body").offset().top);
     localStorage.setItem("initial_loader", 1);
       setTimeout(() => {
-        Toggle();
+        // Toggle();
       }, 2000);
   }, []);
     		setTimeout(() => {

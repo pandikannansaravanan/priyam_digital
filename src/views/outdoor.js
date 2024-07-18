@@ -27,7 +27,7 @@ function Outdoor({ out, out1, caros }) {
     AOS.init();
     // localStorage.setItem("wedding_shuffle", null);
     setTimeout(() => {
-      Toggle();
+      // Toggle();
       if (localStorage.getItem("initial_loader") != "null") {
         $("body").removeClass("loading-full");
       } else {

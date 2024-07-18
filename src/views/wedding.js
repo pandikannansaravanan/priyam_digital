@@ -27,7 +27,7 @@ function Wedding({ wed, wed1, caros }) {
     AOS.init();
     setTimeout(() => {
       // localStorage.setItem("wedding_shuffle", null);
-      Toggle();
+      // Toggle();
       if (localStorage.getItem("initial_loader") != "null") {
         $("body").removeClass("loading-full");
       } else {

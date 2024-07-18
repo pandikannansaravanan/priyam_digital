@@ -38,8 +38,14 @@ function Navigation() {
 		} else if (pathname == '/contact') {
 		$(".6li").addClass("colorlib-active");
 		}
+
+	$(document).on("click", ".navi li", function () {
+		if ($(window).width() <= 768) {
+			$(".js-colorlib-nav-toggle").removeClass("active");
+			$(".body").removeClass("offcanvas");
+		}
+      });
 	}, [])
-	
 	            function isIOS() {
                 return /iPhone|iPad|iPod/i.test(navigator.userAgent);
             }
@@ -68,7 +74,7 @@ function Navigation() {
 		<aside id="colorlib-aside" role="complementary" className="js-fullheight text-center">
 				<h1 id="colorlib-logo"><a onClick={() => history('/')}>Priyam Digital @<br /><nav className="new-title">Still Life Studios</nav><span>˗ˏˋ 📸 ˎˊ˗</span></a></h1>
 			<nav id="colorlib-main-menu" role="navigation">
-				<ul>
+				<ul className="navi">
 					<li className="1li">{/* <img src={home} height={30} width={30}/> */}<a  onClick={ () =>  history('/') }>Home</a></li>
 					<li className="2li">{/* <img src={wed} height={25} width={25}/> */}<a  onClick={ () =>  history('/wedding') }>Wedding</a></li>
 					<li className="3li">{/* <img src={wed_o} height={25} width={25}/> */}<a  onClick={ () =>  history('/outdoor') }>Outdoor</a></li>
