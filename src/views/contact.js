@@ -86,7 +86,7 @@ function Outdoor() {
               </div>
             </div>
             <div className="row block-9">
-              <div className="col-md-6 order-md-last pr-md-5">
+              <div className="col-md-6">
                 <form>
                   <div className="form-group">
                     <input type="text" id="name" className="form-control" placeholder="Your Name"/>
