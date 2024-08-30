@@ -8,6 +8,7 @@ import emailjs from "@emailjs/browser";
 function Outdoor() {
     var history = useNavigate();
     	const [isOnline, setIsOnline] = useState(navigator.onLine);
+    const [isButtonDisabled, setButtonDisabled] = useState(false);
 
     var Toggle = () => {
       if ($(".js-colorlib-nav-toggle").hasClass("active")) {
@@ -39,7 +40,26 @@ function Outdoor() {
           });
         }, 2000);
   
-   const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
+    setButtonDisabled(false);
+    $("#name-error").addClass("d-none");
+    $("#email-error").addClass("d-none");
+    $("#message-error").addClass("d-none");
+    if ($("#name").val() == '' || $("#mail").val() == '' || $("#message").val() == '') {
+
+        if($("#name").val() == '')
+        $("#name-error").removeClass('d-none');
+        
+        if($("#mail").val() == '')
+        $("#email-error").removeClass('d-none');
+
+        if($("#message").val() == '')
+        $("#message-error").removeClass('d-none');
+
+        return true;
+    } else {
+      setButtonDisabled(true);
+    }
     const serviceId = "service_33i65kg";
      const templateId = "template_gvenf0n";
      var params = {
@@ -58,6 +78,7 @@ function Outdoor() {
         $("#name").val("");
         $("#mail").val("");
         $("#message").val("");
+        setButtonDisabled(false);
       }, 2000);
     }
   };
@@ -90,18 +111,21 @@ function Outdoor() {
                 <form>
                   <div className="form-group">
                     <input type="text" id="name" className="form-control" placeholder="Your Name"/>
+                    <span id="name-error" className="text-danger d-none">please enter name</span>
                   </div>
                   <div className="form-group">
-                    <input type="text" id="mail" className="form-control" placeholder="Your Email"/>
+                        <input type="text" id="mail" className="form-control" placeholder="Your Email" />
+                    <span id="email-error" className="text-danger d-none">please enter email</span>
                   </div>
                   {/* <div className="form-group">
                     <input type="text" className="form-control" placeholder="Subject"/>
                   </div> */}
                   <div className="form-group">
                     <textarea name="" id="message" cols="30" rows="7" className="form-control" placeholder="Message"></textarea>
+                    <span id="message-error" className="text-danger d-none">please enter message</span>
                   </div>
                   <div className="form-group">
-                    <input type="button" id="submit" onClick={() => handleSubmit()} value="Send Message" className="btn btn-primary py-3 px-5"/>
+                    <input type="button" id="submit" onClick={() => handleSubmit()} value="Send Message" className="btn btn-primary py-3 px-5" disabled={isButtonDisabled}/>
                   </div>
                 </form>
                   <h6 className="emailsuccess d-none"><b>Email Send Successfully.</b></h6>

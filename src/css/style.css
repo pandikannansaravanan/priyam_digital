@@ -8622,19 +8622,76 @@ textarea.form-control {
   position:relative;
   text-align:right;
   height:400px;
-  width:430px;
   box-shadow: rgba(0, 0, 0, 0.30) 0px 5px 15px;
   border: 0;
+}
+@media screen and (max-width: 500px) {
+  .mapouter{
+    width: 350px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .mapouter{
+    width: 300px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .mapouter{
+    width: 250px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .mapouter{
+    width:430px;
+  }
 }
 .gmap_canvas{
   overflow:hidden;
   background:none!important;
-  width:430px;
   height:400px;
 }
+@media screen and (max-width: 500px) {
+  .gmap_canvas{
+    width: 350px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .gmap_canvas{
+    width: 300px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .gmap_canvas{
+    width: 250px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .gmap_canvas{
+    width:430px;
+  }
+}
 .gmap_iframe{
-  width:430px!important;
   height:400px!important;
+}
+@media screen and (max-width: 500px) {
+  .gmap_iframe{
+    width: 350px!important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .gmap_iframe{
+    width: 300px!important;
+  }
+}
+@media screen and (max-width: 350px) {
+  .gmap_iframe{
+    width: 250px!important;
+  }
+}
+@media screen and (min-width: 500px) {
+  .gmap_iframe{
+    width:430px!important;
+  }
 }
 .emailsuccess b{
   color: green;
