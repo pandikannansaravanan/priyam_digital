@@ -8586,20 +8586,20 @@ textarea.form-control {
 .loading-full::after {
   content: "";
   display: inline-block;
-  border: none !important;
   border-top: none !important;
-  width: 80px;
-  height: 80px;
+  z-index: 9999;
   animation: none !important;
   background-image: url(../images/newld1.gif);
-  background-size: 80px;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  margin: 0px 0;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
   background-repeat: no-repeat;
+  background-size: max(5vw, 50px);
+  border: none !important;
+  height: max(calc(15dvh - 25px), 50px);
+  left: 50%;
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: max(5vw,50px);
 }
 
 .loading-full::before {
