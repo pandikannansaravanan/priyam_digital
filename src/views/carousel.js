@@ -52,6 +52,7 @@ function Carousel({ caro }) {
     <>
       {/* only 10 */}
           <div className="items">
+          <div className="centered-new">Click to view</div>
           {shuffleArray(caro)?.map((element, index) => (    
             <img key={index} className="item" src={"https://drive.google.com/thumbnail?id=" +`${element.id}` +"&sz=w1000"} alt=""></img>
           // <div key={index} className="item" tabIndex="0" style={{backgroundImage:"url('https://drive.google.com/thumbnail?id=" +`${element.id}` +"&sz=w1000')",}}></div>

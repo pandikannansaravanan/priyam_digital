@@ -27,3 +27,14 @@
     width: 200%;
 }
 
+.centered-new{
+    position: absolute;
+    top: 6%;
+    left: 61%;
+    color: #ffffff;
+    transform: translate(-50%, -50%);
+    font-size: xxx-large;
+    font-family: auto;
+    -webkit-text-stroke: 1px #00bde8;
+    text-stroke: 2px black;
+}
