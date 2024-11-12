@@ -4,8 +4,8 @@ import AOS from "aos";
 import "../css/carousel.css";
 function Carousel({ caro }) {
   
-  $(document).on("mouseenter", ".items", function () { $(".centered-new").addClass('d-none'); });
-  $(document).on("mouseleave", ".items", function () {$(".centered-new").removeClass("d-none");});
+  // $(document).on("mouseenter", ".items", function () { $(".centered-new").addClass('d-none'); });
+  // $(document).on("mouseleave", ".items", function () {$(".centered-new").removeClass("d-none");});
   function shuffleArray(array) {
         if (localStorage.getItem("wedding_shuffle") == "null" && array.length!=0) {
           for (let i = array.length - 1; i > 0; i--) {
@@ -58,7 +58,7 @@ function Carousel({ caro }) {
             <img key={index} className="item" src={"https://drive.google.com/thumbnail?id=" +`${element.id}` +"&sz=w1000"} alt=""></img>
             // <div key={index} className="item" tabIndex="0" style={{backgroundImage:"url('https://drive.google.com/thumbnail?id=" +`${element.id}` +"&sz=w1000')",}}></div>
           ))}
-          <div className="centered-new">Click to view</div>
+          {/* <div className="centered-new">Click to view</div> */}
         </div>
     </>
   );
