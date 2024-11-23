@@ -8709,7 +8709,7 @@ textarea.form-control {
 .grid-div {
   flex: 50%;
   max-width: 50%;
-  padding: 0 4px;
+  padding: 0 11px;
 }
 
 .grid-div img {
@@ -8733,4 +8733,17 @@ textarea.form-control {
     max-width: 100%;
   }
 }
-
+.first-div{
+  box-shadow: 5px 5px 25px #75757526;
+  border: 1px solid #e5e5e5;
+  border-radius: 15px;
+  padding: 8px;
+  margin-left:5px;
+}
+.secound-div{
+  box-shadow: 5px 5px 25px #75757526;
+  border: 1px solid #e5e5e5;
+  border-radius: 15px;
+  padding: 7px;
+  margin-right:5px;
+}

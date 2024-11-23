@@ -59,12 +59,12 @@ function Wedding({ wed, wed1, caros }) {
             <div className="row row-grid">
               <div className="grid-div">
               {wed?.map((element, index) => (
-                      <img key={index} src={"https://drive.google.com/thumbnail?id=" +`${element.id}` +"&sz=w1000"} data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1000"/>
+                      <img className="first-div" key={index} src={"https://drive.google.com/thumbnail?id=" +`${element.id}` +"&sz=w1000"} data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1000"/>
               ))}
                 </div>
                 <div className="grid-div">
               {wed1?.map((element, index) => (
-                      <img key={index} src={"https://drive.google.com/thumbnail?id=" +`${element.id}` +"&sz=w1000"} data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1000"/>
+                      <img className="secound-div" key={index} src={"https://drive.google.com/thumbnail?id=" +`${element.id}` +"&sz=w1000"} data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1000"/>
               ))}
               </div>
             </div>
